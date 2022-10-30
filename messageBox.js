@@ -8,7 +8,7 @@ messageTitle.textContent = "Welcome to your library...";
 
 const messageContent = document.createElement("h2");
 messageContent.textContent =
-  "Click on a book to see its info. Double click on it to exit!";
+  "Click on a book to see its info. Double click on it to exit.";
 const messageContent2 = document.createElement("h3")
 messageContent2.textContent = "Click this white button a book to add it to your favorites!"
 
