@@ -6,6 +6,8 @@ class Bookshelf {
       this.bookArray = [];
       this.numberOfShelves = numOfShelves;
       this.faveArray = [];
+      this.searchArray = [];
+
     }
   
     // addBook: takes book arguemnt and adds it to Bookshelf class's bookArray
@@ -130,4 +132,35 @@ class Bookshelf {
       bookShelf.append(shelves);
       main.replaceChildren(bookShelf);
     }
+
+    renderSearch() {
+        const main = document.querySelector(".bookShelf");
+        main.className = "main";
+    
+        const bookShelf = document.createElement("section");
+        bookShelf.className = "bookShelf";
+    
+        const shelves = document.createElement("section");
+        shelves.className = "shelves";
+    
+        for (let i = 0; i < this.numberOfShelves; i++) {
+          const shelfArray = [];
+          shelfArray[i] = document.createElement("div");
+          shelfArray[i].className = "shelfArray";
+          const booksPerShelf = Math.floor(
+            this.bookArray.length / this.numberOfShelves
+          );
+          let jStart = i * booksPerShelf;
+          for (let j = jStart; j < this.searchArray.length; j++) {
+            const newBook = document.createElement("div");
+            const renderedBook = this.searchArray[j].render();
+            newBook.replaceChildren(renderedBook);
+            shelfArray[i].append(newBook);
+          }
+          shelves.append(shelfArray[i]);
+        }
+    
+        bookShelf.append(shelves);
+        main.replaceChildren(bookShelf);
+      }
   }

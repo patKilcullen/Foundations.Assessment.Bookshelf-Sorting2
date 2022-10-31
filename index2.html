@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+<!-- Message Box: top part of page that allows user to maniplate bookshelf -->
+    <section id="message-Box">
+  <!-- Sorter Section: allows users to re-sort the bookhelf in various ways -->
+     <!--sorter: dropdown list  -->
+      <select id="sorter">
+        <option value="">Sort by</option>
+        <option value="author">Author</option>
+        <option value="title">Title</option>
+        <option value="subjects"># of Subjects</option>
+      </select>
+      <label class="sortSwitchBox">
+        <input type="checkbox" />
+        <div class="slider"></div>
+      </label>
+      <button id="sortButton">Sort</button>
+  <!--Favorites Sections: has a button that updates user's favorite books
+  and displays only those books on the shelf  -->
+      <div id="likedLabel">
+         Favorite Books:
+        <span id="likedCount">0</span>
+      </div>
+      <button id="favesButton">Update and See Favorites</button>
+    </section>
+    <div id="search">Search
+        <select id="searchDrop">
+            <option value="">Seach by</option>
+            <option value="author">Author</option>
+            <option value="title">Title</option>
+            <option value="subjects">Subject</option>
+          </select>
+        <input id="searchInput">
+        <button id="searchButton">Search</button>
+    </div>
+<!-- Bookshelf: a single bookShelf html element that acts as the root for 
+all the bookshelf DOM information -->
+    <section class="bookShelf"></section>
+<!-- the scripts of the different files are added in order for each consecutive
+one to have everything is needs from the previous files -->
+    <script src="js/book-data.js"></script>
+    <script src="books.js"></script>
+    <script src="bookshelf2.js"></script>
+    <script src="index.js"></script>
+    <script src="messageBox2.js"></script>
+  </body>
+</html>

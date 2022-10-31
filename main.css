@@ -2,6 +2,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url("Long-Room-Trinity-College-Dublin.jpeg");
+    background-size: cover;
   }
   .main {
     display: flex;
