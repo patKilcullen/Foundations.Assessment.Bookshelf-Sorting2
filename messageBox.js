@@ -1,4 +1,4 @@
-// MesssageBox: the main html element that holds everything in the upp
+// MesssageBox: the main html element that holds everything in the upper
 // section of of page(the message box)
 const messageBox = document.querySelector("#message-Box");
 messageBox.className = "messageBox";
