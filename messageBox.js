@@ -34,6 +34,7 @@ leftDireciton.textContent = "A-Z, Low-High";
 // sortDirection: the toggle sort switch
 const sortDirection = document.querySelector(".sortSwitchBox");
 const sortSwitch = document.querySelector("input[type='checkbox']");
+sortSwitch.className = "sortSwitch"
 
 const rightDireciton = document.createElement("p");
 rightDireciton.textContent = "Z-A, High-Low";
